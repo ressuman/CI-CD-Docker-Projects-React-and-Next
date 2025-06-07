@@ -55,4 +55,6 @@ jobs:
       #     configFile: commitlint.config.cjs
 
       - name: Check commit messages
-        run: npx commitlint --since="1 week ago" --config commitlint.config.cjs
+        run: |
+          from_commit=$(git rev-list HEAD | tail -n 1)
+          npx commitlint --from=$from_commit --to=HEAD --config commitlint.config.cjs
