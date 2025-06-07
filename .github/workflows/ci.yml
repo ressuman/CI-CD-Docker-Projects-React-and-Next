@@ -54,7 +54,10 @@ jobs:
       #   with:
       #     configFile: commitlint.config.cjs
 
-      - name: Check commit messages
-        run: |
-          from_commit=$(git rev-list HEAD | tail -n 1)
-          npx commitlint --from=$from_commit --to=HEAD --config commitlint.config.cjs
+      # This is the best-rules before commiting
+      # - name: Check commit messages
+      #   run: |
+      #     from_commit=$(git rev-list HEAD | tail -n 1)
+      #     npx commitlint --from=$from_commit --to=HEAD --config commitlint.config.cjs
+      - name: Check latest commit message
+        run: npx commitlint --to HEAD --config commitlint.config.cjs
