@@ -55,4 +55,4 @@ jobs:
       #     configFile: commitlint.config.cjs
 
       - name: Check commit messages
-        run: npx commitlint --from=HEAD~70 --to=HEAD --config commitlint.config.cjs
+        run: npx commitlint --since="1 week ago" --config commitlint.config.cjs
