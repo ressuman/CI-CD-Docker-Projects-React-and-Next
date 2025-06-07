@@ -48,7 +48,7 @@ module.exports = {
     'subject-case': [2, 'always', 'sentence-case'],
     'subject-full-stop': [2, 'always', '.'], // Enforce period at the end
     'header-min-length': [2, 'always', 20],
-    'header-max-length': [2, 'always', 72],
+    'header-max-length': [2, 'always', 200],
     // 'type-empty': [2, 'never'],
     // 'subject-empty': [2, 'never'],
     // // 'subject-full-stop': [2, 'never', '.'],
